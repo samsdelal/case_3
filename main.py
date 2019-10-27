@@ -15,13 +15,12 @@ while months_1 != years * 12:
     summ_month = invest_start * percent                                                                #Нужен вывод
 
     print(Total_per_month)
-
+    months += 1
     period += 1
     i += 1
     months_1 += 1
     if months == 12:
         months = 0
-        months += 1
         print('new_year')
 
 
