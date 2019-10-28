@@ -1,3 +1,8 @@
+# Case-study #3
+# Developers:   Kuznetosv B. (50%),
+#               Odoevcev S. (50%),
+#               Makarov a. (20%)
+
 import local as lc
 import time as t
 
