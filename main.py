@@ -1,5 +1,3 @@
-
-import math as m
 import local as lc
 
 MONTH = 1
@@ -23,13 +21,14 @@ for year_print in range(year):
     print("| месяц | инвестиций | за месяц | капитал |")
     print(lc.TEXT_END)
     while month < 13:
+        round(capital_start, 2)
         summ_month = percent_bank * capital_start / 100
-        new_capital = capital_start * (percent_bank / 100 + 1)
-        round(summ_month, 1)
-        round(new_capital, 1)
-        print("|", month, "| ", initial_capital, " | ", summ_month, " | ", new_capital, " |")
+        basement = capital_start * (percent_bank / 100 + 1)
+        round(summ_month, 2)
+        round(basement, 2)
+        print("|", month, "| ", capital_start, " | ", summ_month, " | ", basement, " |")
         month += 1
-        initial_capital = capital_start * (percent_bank / 100 + 1) + investment_give
+        capital_start = capital_start * (percent_bank / 100 + 1) + investment_give
 
 
 
