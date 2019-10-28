@@ -1,4 +1,5 @@
 import local as lc
+import time as t
 
 MONTH = 1
 CAPITAL = 0
@@ -15,7 +16,9 @@ for year_print in range(year):
     month = 0
     year_print += 1
     print("")
+    t.sleep(1)
     print(year_print, "ГОД / YEAR")
+    t.sleep(1)
     print(lc.TEXT_END)
     print("| month |   основа   | сумма %  |         |")
     print("| месяц | инвестиций | за месяц | капитал |")
@@ -26,6 +29,7 @@ for year_print in range(year):
         basement = capital_start * (percent_bank / 100 + 1)
         summ_month = float('{:.1f}'.format(summ_month))
         basement = float('{:.1f}'.format(basement))
+        t.sleep(0.01)
         print("|", month, "| ", capital_start, " | ", summ_month, " | ", basement, " |")
         month += 1
         capital_start = capital_start * (percent_bank / 100 + 1) + investment_give
