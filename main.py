@@ -23,13 +23,13 @@ for year_print in range(year):
     print("| месяц | инвестиций | за месяц | капитал |")
     print(lc.TEXT_END)
     while month < 13:
-        summ_month = percent_bank * initial_capital / 100
-        new_capital = initial_capital * (percent_bank / 100 + 1)
+        summ_month = percent_bank * capital_start / 100
+        new_capital = capital_start * (percent_bank / 100 + 1)
         round(summ_month, 1)
         round(new_capital, 1)
         print("|", month, "| ", initial_capital, " | ", summ_month, " | ", new_capital, " |")
         month += 1
-        initial_capital = initial_capital * (percent_bank / 100 + 1) + investment_give
+        initial_capital = capital_start * (percent_bank / 100 + 1) + investment_give
 
 
 
