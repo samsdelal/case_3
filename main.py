@@ -24,11 +24,12 @@ for year_print in range(year):
         round(capital_start, 2)
         summ_month = percent_bank * capital_start / 100
         basement = capital_start * (percent_bank / 100 + 1)
-        round(summ_month, 2)
-        round(basement, 2)
+        summ_month = float('{:.1f}'.format(summ_month))
+        basement = float('{:.1f}'.format(basement))
         print("|", month, "| ", capital_start, " | ", summ_month, " | ", basement, " |")
         month += 1
         capital_start = capital_start * (percent_bank / 100 + 1) + investment_give
+        capital_start = float('{:.1f}'.format(capital_start))
 
 
 
